@@ -1,4 +1,24 @@
-import { GEO_CONFIG } from "@/lib/geo-config"
+const countryToLanguage: Record<string, string> = {
+  us: "en",
+  fr: "fr",
+  de: "de",
+  gb: "en",
+  ch: "de",
+  es: "es",
+  it: "it",
+  lu: "fr",
+  si: "sl",
+  au: "en",
+  ca: "en",
+  pl: "pl",
+  gr: "el",
+  ba: "sr",
+  me: "sr",
+  ae: "ar",
+  bg: "bg",
+  qa: "ar",
+  sa: "ar",
+}
 
 const translations: Record<string, Record<string, string>> = {
   en: {
@@ -1169,23 +1189,7 @@ export async function detectCountryAndGetLanguage(): Promise<string> {
       // try next
     }
 
-    // 2) Same-origin: server resolves IP from proxy headers + same API chain as middleware
-    if (!countryCode) {
-      try {
-        const response = await fetch("/api/geo", {
-          cache: "no-store",
-          signal: AbortSignal.timeout(8000),
-        })
-        if (response.ok) {
-          const data = (await response.json()) as { countryCode?: string }
-          countryCode = data.countryCode?.toLowerCase() ?? null
-        }
-      } catch {
-        // try next
-      }
-    }
-
-    // 3) Public fallback
+    // 2) Public fallback
     if (!countryCode) {
       try {
         const response = await fetch("https://api.country.is/", { signal: AbortSignal.timeout(5000) })
@@ -1199,7 +1203,7 @@ export async function detectCountryAndGetLanguage(): Promise<string> {
     }
 
     const cc = (countryCode || "").toLowerCase()
-    const allowedLang = GEO_CONFIG.allowedCountryToLanguage[cc]
+    const allowedLang = countryToLanguage[cc]
     if (allowedLang) return allowedLang
 
     return languageFromBrowserPrimary() || "en"
