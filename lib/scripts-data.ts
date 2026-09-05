@@ -9,12 +9,12 @@ export interface GameScript {
 
 export const gameScripts: GameScript[] = [
   {
-    id: "grow-a-garden-2",
-    name: "Grow a Garden 2",
+    id: "Murder Mystery 2",
+    name: "Murder Mystery 2",
     description: "",
     category: "Simulator",
     features: ["Spawn Pets & Seeds", "Steal People Fruits", "Dupe Fruits", "Instant Grow", "Teleport"],
-    logoUrl: "https://tr.rbxcdn.com/180DAY-e87bf2524ceeb4909aa2f15f555f38cf/150/150/Image/Webp/noFilter",
+    logoUrl: "https://tr.rbxcdn.com/180DAY-313f1416cd5e4335a97d054183743fdd/150/150/Image/Webp/noFilter",
   },
   {
     id: "adopt-me",
@@ -22,22 +22,22 @@ export const gameScripts: GameScript[] = [
     description: "",
     category: "Other",
     features: ["Item Dupe", "Auto Farm & Auto Buy", "Auto-Attack", "Kill-Aura", "No Cooldown"],
-    logoUrl: "https://tr.rbxcdn.com/180DAY-6c91fbdd8f3953131d17625e72e6ad72/150/150/Image/Webp/noFilter",
+    logoUrl: "https://tr.rbxcdn.com/180DAY-5924fcb75a087ef1c413bd8db3d501a7/150/150/Image/Webp/noFilter",
+  },
+  {
+    id: "grow-a-garden-2",
+    name: "Grow a Garden 2",
+    description: "",
+    category: "Adventure",
+    features: ["Auto Steal", "Item ESP", "Speed Hack", "TELEPORT", "FLY"],
+    logoUrl: "https://tr.rbxcdn.com/180DAY-9034ef0846b1f55d0b41e95532191efa/150/150/Image/Webp/noFilter",
   },
   {
     id: "steal-a-brainrot",
     name: "Steal a Brainrot",
     description: "",
-    category: "Adventure",
-    features: ["Auto Steal", "Item ESP", "Speed Hack", "TELEPORT", "FLY"],
-    logoUrl: "https://tr.rbxcdn.com/180DAY-380d1634b060dfae54e93d379c68202c/150/150/Image/Webp/noFilter",
-  },
-  {
-    id: "brookhaven",
-    name: "Brookhaven",
-    description: "",
     category: "Simulator",
     features: ["Spawn Pets & Seeds", "Steal People Fruits", "Dupe Fruits", "Instant Grow", "Teleport"],
-    logoUrl: "https://tr.rbxcdn.com/180DAY-3ac5af325970a745b0156a5358174169/150/150/Image/Webp/noFilter",
+    logoUrl: "https://tr.rbxcdn.com/180DAY-e867b1a09af00635643dd3d6d10e34a3/150/150/Image/Webp/noFilter",
   },
 ]
